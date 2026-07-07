@@ -106,7 +106,7 @@ export const industryCards: IndustryCard[] = [
   {
     href: "/industries/education",
     cat: "hr",
-    image: "/images/edu.png",
+    image: "/images/industries/education.png",
     tag: "Education",
     title: "Education",
     body: "Manage student records, finance, attendance, HR, and communication in one centralized platform for schools, kindergartens, tahfiz centers, tuition centers, and academies.",
@@ -114,7 +114,7 @@ export const industryCards: IndustryCard[] = [
   {
     href: "/industries/sme-corporate",
     cat: "finance",
-    image: "/images/finance1.png",
+    image: "/images/industries/sme.png",
     tag: "Business",
     title: "SMEs & Corporate",
     body: "Simplify daily operations with integrated ERP solutions covering finance, HR, payroll, CRM, inventory, and reporting — built for growing businesses.",
@@ -122,7 +122,7 @@ export const industryCards: IndustryCard[] = [
   {
     href: "/industries/workshop",
     cat: "operations",
-    image: "/images/bengkel.png",
+    image: "/images/industries/workshop.png",
     tag: "Operations",
     title: "Workshops & Service Centers",
     body: "Track jobs, customer records, quotations, invoicing, stock usage, and technician workflows with smarter operational management.",
@@ -130,7 +130,7 @@ export const industryCards: IndustryCard[] = [
   {
     href: "/industries/ngo",
     cat: "technology",
-    image: "/images/hr.png",
+    image: "/images/industries/ngo.png",
     tag: "Non-Profit",
     title: "NGOs & Non-Profit Organizations",
     body: "Improve transparency and operational efficiency with donation tracking, volunteer management, reporting, and automated financial monitoring.",
@@ -138,7 +138,7 @@ export const industryCards: IndustryCard[] = [
   {
     href: "/industries/fnb-retail",
     cat: "finance",
-    image: "/images/fnb.png",
+    image: "/images/industries/fnb.png",
     tag: "Retail",
     title: "F&B & Retail",
     body: "Streamline POS operations, inventory management, staff attendance, customer loyalty, and business analytics for restaurants, cafés, and retail outlets.",
@@ -146,7 +146,7 @@ export const industryCards: IndustryCard[] = [
   {
     href: "/industries/property",
     cat: "technology",
-    image: "/images/strata.png",
+    image: "/images/industries/strata.png",
     tag: "Property",
     title: "Property & Strata Management",
     body: "Handle visitor management, maintenance requests, billing, announcements, facility bookings, and community operations efficiently.",

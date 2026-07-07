@@ -175,7 +175,7 @@ export default function EbossCmsDemoPage() {
         </section>
 
         {/* ════════════ CONFIGURATION + LIVE PREVIEW (image + details) ════════════ */}
-        <section className="cmx-section">
+        <section className="cmx-section" id="cms-config">
           <div className="cmx-wrap">
             <div className="cmx-split">
               <div className="cmx-split-media cms-reveal-scale cmx-clip">
@@ -314,7 +314,7 @@ export default function EbossCmsDemoPage() {
         </section>
 
         {/* ════════════ SPOTLIGHT — Menu builder (video + details) ════════════ */}
-        <section className="cmx-section cmx-panel-soft">
+        <section className="cmx-section cmx-panel-soft" id="cms-menu">
           <div className="cmx-wrap cmx-center cms-reveal">
             <span className="cmx-eyebrow">Spotlight</span>
             <h2 className="cmx-h">A menu builder people actually enjoy</h2>
@@ -345,7 +345,7 @@ export default function EbossCmsDemoPage() {
         </section>
 
         {/* ════════════ BANNERS (image + details) ════════════ */}
-        <section className="cmx-section">
+        <section className="cmx-section" id="cms-banners">
           <div className="cmx-wrap">
             <div className="cmx-split flip">
               <div className="cmx-split-media cms-reveal-scale cmx-clip">
@@ -449,7 +449,7 @@ export default function EbossCmsDemoPage() {
         </section>
 
         {/* ════════════ CONTENT MODULES ════════════ */}
-        <section className="cmx-section cmx-panel-soft">
+        <section className="cmx-section cmx-panel-soft" id="cms-content">
           <div className="cmx-wrap cmx-center cms-reveal">
             <span className="cmx-eyebrow">Content modules</span>
             <h2 className="cmx-h">Everything your site shows, managed</h2>

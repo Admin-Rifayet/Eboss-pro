@@ -95,7 +95,7 @@ export default function EbossRecruitmentPage() {
         </section>
 
         {/* ════════════ STAGE 1 — the applicant portal (image + caption) ════════════ */}
-        <section className="cmx-section tight cmx-panel">
+        <section className="cmx-section tight cmx-panel" id="rec-portal">
           <div className="cmx-wrap">
             <div className="cmx-stage cms-reveal-scale cmx-clip">
               <BrowserMock
@@ -116,7 +116,7 @@ export default function EbossRecruitmentPage() {
         </section>
 
         {/* ════════════ SPLIT — Admin studio / dashboard (image + details) ════════════ */}
-        <section className="cmx-section">
+        <section className="cmx-section" id="rec-studio">
           <div className="cmx-wrap">
             <div className="cmx-split">
               <div className="cmx-split-media cms-reveal-scale cmx-clip">
@@ -211,7 +211,7 @@ export default function EbossRecruitmentPage() {
         </section>
 
         {/* ════════════ SPOTLIGHT — Applications board (image + steps) ════════════ */}
-        <section className="cmx-section">
+        <section className="cmx-section" id="rec-board">
           <div className="cmx-wrap cmx-center cms-reveal">
             <span className="cmx-eyebrow">Spotlight</span>
             <h2 className="cmx-h">A hiring board recruiters actually enjoy</h2>
@@ -270,7 +270,7 @@ export default function EbossRecruitmentPage() {
         </section>
 
         {/* ════════════ AI — candidate fit score (image + details) ════════════ */}
-        <section className="cmx-section cmx-panel-soft">
+        <section className="cmx-section cmx-panel-soft" id="rec-ai">
           <div className="cmx-wrap">
             <div className="cmx-split">
               <div className="cmx-split-media cms-reveal-scale cmx-clip">

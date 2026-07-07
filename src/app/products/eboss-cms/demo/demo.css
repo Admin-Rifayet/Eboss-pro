@@ -118,10 +118,49 @@
 }
 .cmx-hero-stage .mock { box-shadow: 0 50px 120px rgba(80,90,180,.35); }
 .cmx-scroll-cue {
-  position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
-  z-index: 2; font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--faint); display: flex; flex-direction: column; align-items: center; gap: 8px;
+  display: none;
 }
+
+/* Deep-linked sections (from the mega-menu) clear the sticky navbar */
+.cmx-section[id] { scroll-margin-top: 84px; }
+
+/* ════ Premium hover for feature tiles (dark product pages) ════ */
+.cmx .cms-tile {
+  position: relative; overflow: hidden;
+  transition: transform .34s cubic-bezier(.22,.61,.36,1),
+              box-shadow .34s ease, border-color .34s ease, background .34s ease;
+}
+.cmx .cms-tile > * { position: relative; z-index: 1; }
+/* gradient border sheen */
+.cmx .cms-tile::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+  background: linear-gradient(135deg, rgba(139,124,255,.75), rgba(91,140,255,.25) 45%, transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity .34s ease; pointer-events: none; z-index: 0;
+}
+/* soft corner glow */
+.cmx .cms-tile::after {
+  content: ""; position: absolute; top: -70px; right: -50px; width: 210px; height: 210px;
+  border-radius: 50%; pointer-events: none; z-index: 0; opacity: 0;
+  background: radial-gradient(circle, rgba(124,58,237,.35), transparent 65%);
+  transition: opacity .34s ease;
+}
+.cmx .cms-tile:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139,124,255,.5);
+  background: rgba(255,255,255,.045);
+  box-shadow: 0 24px 50px rgba(60,40,140,.4);
+}
+.cmx .cms-tile:hover::before,
+.cmx .cms-tile:hover::after { opacity: 1; }
+.cmx .cms-tile-ico { transition: transform .34s cubic-bezier(.22,.61,.36,1), box-shadow .34s ease; }
+.cmx .cms-tile:hover .cms-tile-ico {
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 12px 26px rgba(124,58,237,.5);
+}
+.cmx .cms-tile h4 { transition: color .2s ease; }
+.cmx .cms-tile:hover h4 { color: #c9bcff; }
 .cmx-scroll-cue::after {
   content: ""; width: 1px; height: 34px;
   background: linear-gradient(var(--faint), transparent);
