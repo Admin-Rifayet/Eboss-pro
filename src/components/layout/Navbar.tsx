@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { navButtons } from "@/data/home";
@@ -13,10 +14,16 @@ export default function Navbar({
   /** Glassy dark theme that matches the product (cmx) pages. */
   dark?: boolean;
 }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
   const className =
-    [flush ? "nav-flush" : "", dark ? "nav-dark" : ""]
+    [
+      flush ? "nav-flush" : "",
+      dark ? "nav-dark" : "",
+      mobileOpen ? "mobile-open" : "",
+    ]
       .filter(Boolean)
       .join(" ") || undefined;
+
   return (
     <nav className={className}>
       <a className="nav-logo-block" href="/">
@@ -35,32 +42,53 @@ export default function Navbar({
         </div>
       </a>
 
-      <div className="nav-links">
-        {navButtons.map((label) => {
-          const panelId = `${label.toLowerCase()}-panel`;
-          return (
-            <button
-              key={label}
-              className="nav-btn"
-              data-menu={label.toLowerCase()}
-              type="button"
-              onClick={(e) => window.toggleMenu?.(e.currentTarget, panelId)}
-            >
-              {label}
-            </button>
-          );
-        })}
-      </div>
+      <button
+        type="button"
+        className="nav-burger"
+        aria-label="Toggle menu"
+        aria-expanded={mobileOpen}
+        onClick={() => setMobileOpen((o) => !o)}
+      >
+        <svg viewBox="0 0 24 24" aria-hidden width="26" height="26">
+          {mobileOpen ? (
+            <path d="M6 6l12 12M18 6L6 18" />
+          ) : (
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          )}
+        </svg>
+      </button>
 
-      <NavSearch />
+      <div className="nav-collapse">
+        <div className="nav-links">
+          {navButtons.map((label) => {
+            const panelId = `${label.toLowerCase()}-panel`;
+            return (
+              <button
+                key={label}
+                className="nav-btn"
+                data-menu={label.toLowerCase()}
+                type="button"
+                onClick={(e) => {
+                  window.toggleMenu?.(e.currentTarget, panelId);
+                  setMobileOpen(false);
+                }}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
 
-      <div className="nav-actions">
-        <Link className="btn-nav" href="/signin">
-          Sign In
-        </Link>
-        <Link className="btn-nav primary" href="/signup">
-          Create Account
-        </Link>
+        <NavSearch />
+
+        <div className="nav-actions">
+          <Link className="btn-nav" href="/signin">
+            Sign In
+          </Link>
+          <Link className="btn-nav primary" href="/signup">
+            Create Account
+          </Link>
+        </div>
       </div>
     </nav>
   );

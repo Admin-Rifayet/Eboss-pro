@@ -31,7 +31,7 @@ export const heroSlides: HeroSlide[] = [
     body: "EBOSSPro delivers ERP, AI-powered workflows, and managed digital services to help businesses simplify operations, improve visibility, and grow with confidence.",
     primaryLabel: "Get started free",
     outlineLabel: "Explore services",
-    cardPhoto: "/images/boss1.png",
+    cardPhoto: "/images/hero-event.png",
     cardBadge: "Livestream Event",
     cardDate: "May 13 | 10:00 AM",
     cardTitle: "AWFATECH Strategic Insight & User Conferences",
