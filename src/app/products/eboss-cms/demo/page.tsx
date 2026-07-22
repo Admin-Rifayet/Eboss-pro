@@ -430,17 +430,17 @@ export default function EbossCmsDemoPage() {
           <div className="cmx-wrap">
             <div className="cmx-themes">
               {[
-                { n: 1, desc: "Marketplace-ready" },
-                { n: 2, desc: "Clean corporate" },
-                { n: 3, desc: "Bold editorial" },
-                { n: 4, desc: "Minimal NGO" },
-                { n: 5, desc: "Community / mosque" },
-                { n: 6, desc: "School & education" },
+                { n: 1, name: "Website" },
+                { n: 2, name: "Donation" },
+                { n: 3, name: "Marketplace" },
+                { n: 4, name: "Corporate" },
+                { n: 5, name: "Portfolio" },
+                { n: 6, name: "Blog" },
               ].map((t, i) => (
                 <div key={t.n} className="cmx-theme cms-reveal-scale cmx-clip" style={{ "--d": `${(i % 2) * 100}ms` } as CSSProperties}>
-                  <BrowserMock src={`/cms/demo${t.n}.png`} alt={`Demo ${t.n} theme`} label={`/cms/demo${t.n}.png`} />
+                  <BrowserMock src={`/cms/demo${t.n}.png`} alt={`${t.name} template`} label={`/cms/demo${t.n}.png`} />
                   <div className="cmx-theme-name">
-                    Demo {t.n} <span>— {t.desc}</span>
+                    Demo {t.n} <span>— {t.name}</span>
                   </div>
                 </div>
               ))}
